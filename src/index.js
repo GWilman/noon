@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bulma';
 import './styles.scss';
+import './styles/helpers.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -20,6 +20,10 @@ class Admin extends Component {
   };
 
   componentDidMount() {
+    this.getListings();
+  }
+
+  getListings() {
     API.get('listings')
       .then(res => {
         console.log(res);
@@ -29,26 +33,56 @@ class Admin extends Component {
   }
 
   handleChange = ({ target: { name, value } }) => {
+    if (value === 'true') value = true;
+    if (value === 'false') value = false;
     console.log('target', name, value);
     const newListing = Object.assign({}, this.state.newListing, { [name]: value });
     this.setState({ newListing });
   }
 
-  handleValueAdd = ({ target: { name, value } }) => {
-    console.log('target', name, value);
-    const array = this.state.newListing[name].concat(value);
+  handleValueAdd = (name, value) => {
+    console.log('vals', name, value);
+    let array = [];
+    if (this.state.newListing[name].indexOf(value) >= 0) {
+      array = this.state.newListing[name].filter(val => val !== value);
+    } else {
+      array = this.state.newListing[name].concat(value);
+    }
     const newListing = Object.assign({}, this.state.newListing, { [name]: array });
+    this.setState({ newListing });
+  }
+
+  handleValueSelect = (name, value) => {
+    console.log('vals', name, value);
+    const newListing = Object.assign({}, this.state.newListing, { [name]: value });
     this.setState({ newListing });
   }
 
   handleSubmit = (e) => {
   e.preventDefault();
-  const newListing = Object.assign({}, this.state.newListing);
+  const newListing = Object.assign({}, this.state.newListing, { pqe: parseFloat(this.state.newListing.pqe)});
 
   API
-    .post('/listing', newListing)
+    .post('listings', newListing, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
     .then(listing => {
       console.log('Listing added', listing);
+      const newListing = Object.assign({}, {
+        company: '',
+        position: '',
+        industry: [],
+        area: [],
+        salary_band: '',
+        company_size: '',
+        location: '',
+        pqe: 0,
+        wildcard: false
+      });
+      this.setState({ newListing });
+      this.getListings();
     })
     .catch(err => console.log('error', err));
   }
@@ -62,6 +96,7 @@ class Admin extends Component {
           <ListingForm
             handleChange={this.handleChange}
             handleValueAdd={this.handleValueAdd}
+            handleValueSelect={this.handleValueSelect}
             handleSubmit={this.handleSubmit}
             listing={this.state.newListing}
           />
