@@ -37,10 +37,10 @@ const ListingForm = ({ handleChange, handleValueAdd, handleValueSelect, handleWi
           <label className="label">Industry</label>
           <div className="control">
             <div className="flex tags are-medium">
-              <span className={'tag is-light ' + (listing.industry.indexOf('Finance') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('industry', 'Finance')}>Finance</span>
-              <span className={'tag is-light ' + (listing.industry.indexOf('Tech') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('industry', 'Tech')}>Tech</span>
-              <span className={'tag is-light ' + (listing.industry.indexOf('FinTech') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('industry', 'FinTech')}>FinTech</span>
-              <span className={'tag is-light ' + (listing.industry.indexOf('Other') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('industry', 'Other')}>Other</span>
+              <span className={`tag is-light ${(listing.industry.indexOf('Finance') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('industry', 'Finance')}>Finance</span>
+              <span className={`tag is-light ${(listing.industry.indexOf('Tech') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('industry', 'Tech')}>Tech</span>
+              <span className={`tag is-light ${(listing.industry.indexOf('FinTech') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('industry', 'FinTech')}>FinTech</span>
+              <span className={`tag is-light ${(listing.industry.indexOf('Other') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('industry', 'Other')}>Other</span>
             </div>
           </div>
         </div>
@@ -48,10 +48,10 @@ const ListingForm = ({ handleChange, handleValueAdd, handleValueSelect, handleWi
           <label className="label">Area</label>
           <div className="control">
             <div className="flex tags are-medium">
-              <span className={'tag is-light ' + (listing.area.indexOf('Financial Regulation') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('area', 'Financial Regulation')}>Financial Regulation</span>
-              <span className={'tag is-light ' + (listing.area.indexOf('Corporate') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('area', 'Corporate')}>Corporate</span>
-              <span className={'tag is-light ' + (listing.area.indexOf('Real Estate') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('area', 'Real Estate')}>Real Estate</span>
-              <span className={'tag is-light ' + (listing.area.indexOf('Other') >= 0 ? 'is-success' : '')} onClick={() => handleValueAdd('area', 'Other')}>Other</span>
+              <span className={`tag is-light ${(listing.area.indexOf('Financial Regulation') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('area', 'Financial Regulation')}>Financial Regulation</span>
+              <span className={`tag is-light ${(listing.area.indexOf('Corporate') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('area', 'Corporate')}>Corporate</span>
+              <span className={`tag is-light ${(listing.area.indexOf('Real Estate') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('area', 'Real Estate')}>Real Estate</span>
+              <span className={`tag is-light ${(listing.area.indexOf('Other') >= 0 ? 'is-success' : '')}`} onClick={() => handleValueAdd('area', 'Other')}>Other</span>
             </div>
           </div>
         </div>
@@ -59,11 +59,11 @@ const ListingForm = ({ handleChange, handleValueAdd, handleValueSelect, handleWi
           <label className="label">Salary Band</label>
           <div className="control">
             <div className="flex tags are-medium">
-              <span className={'tag is-light ' + (listing.salary_band === 'less than 50k' ? 'is-primary' : '')} onClick={() => handleValueSelect('salary_band', 'less than 50k')}>less than 50k</span>
-              <span className={'tag is-light ' + (listing.salary_band === '50k - 75k' ? 'is-primary' : '')} onClick={() => handleValueSelect('salary_band', '50k - 75k')}>50k - 75k</span>
-              <span className={'tag is-light ' + (listing.salary_band === '75k - 100k' ? 'is-primary' : '')} onClick={() => handleValueSelect('salary_band', '75k - 100k')}>75k - 100k</span>
-              <span className={'tag is-light ' + (listing.salary_band === '100k - 150k' ? 'is-primary' : '')} onClick={() => handleValueSelect('salary_band', '100k - 150k')}>100k - 150k</span>
-              <span className={'tag is-light ' + (listing.salary_band === 'more than 150k' ? 'is-primary' : '')} onClick={() => handleValueSelect('salary_band', 'more than 150k')}>more than 150k</span>
+              <span className={`tag is-light ${(listing.salary_band === 'less than 50k' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('salary_band', 'less than 50k')}>less than 50k</span>
+              <span className={`tag is-light ${(listing.salary_band === '50k - 75k' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('salary_band', '50k - 75k')}>50k - 75k</span>
+              <span className={`tag is-light ${(listing.salary_band === '75k - 100k' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('salary_band', '75k - 100k')}>75k - 100k</span>
+              <span className={`tag is-light ${(listing.salary_band === '100k - 150k' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('salary_band', '100k - 150k')}>100k - 150k</span>
+              <span className={`tag is-light ${(listing.salary_band === 'more than 150k' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('salary_band', 'more than 150k')}>more than 150k</span>
             </div>
           </div>
         </div>
@@ -71,12 +71,12 @@ const ListingForm = ({ handleChange, handleValueAdd, handleValueSelect, handleWi
           <label className="label">Company Size</label>
           <div className="control">
             <div className="flex tags are-medium">
-              <span className={'tag is-light ' + (listing.company_size === '1 - 10' ? 'is-primary' : '')} onClick={() => handleValueSelect('company_size', '1 - 10')}>1 - 10</span>
-              <span className={'tag is-light ' + (listing.company_size === '10 - 25' ? 'is-primary' : '')} onClick={() => handleValueSelect('company_size', '10 - 25')}>10 - 25</span>
-              <span className={'tag is-light ' + (listing.company_size === '25 - 50' ? 'is-primary' : '')} onClick={() => handleValueSelect('company_size', '25 - 50')}>25 - 50</span>
-              <span className={'tag is-light ' + (listing.company_size === '50 - 100' ? 'is-primary' : '')} onClick={() => handleValueSelect('company_size', '50 - 100')}>50 - 100</span>
-              <span className={'tag is-light ' + (listing.company_size === '100 - 500' ? 'is-primary' : '')} onClick={() => handleValueSelect('company_size', '100 - 500')}>100 - 500</span>
-              <span className={'tag is-light ' + (listing.company_size === '500+' ? 'is-primary' : '')} onClick={() => handleValueSelect('company_size', '500+')}>500+</span>
+              <span className={`tag is-light ${(listing.company_size === '1 - 10' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('company_size', '1 - 10')}>1 - 10</span>
+              <span className={`tag is-light ${(listing.company_size === '10 - 25' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('company_size', '10 - 25')}>10 - 25</span>
+              <span className={`tag is-light ${(listing.company_size === '25 - 50' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('company_size', '25 - 50')}>25 - 50</span>
+              <span className={`tag is-light ${(listing.company_size === '50 - 100' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('company_size', '50 - 100')}>50 - 100</span>
+              <span className={`tag is-light ${(listing.company_size === '100 - 500' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('company_size', '100 - 500')}>100 - 500</span>
+              <span className={`tag is-light ${(listing.company_size === '500+' ? 'is-primary' : '')}`} onClick={() => handleValueSelect('company_size', '500+')}>500+</span>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const ListingForm = ({ handleChange, handleValueAdd, handleValueSelect, handleWi
         </div>
       </form>
     </div>
-  );
+  )
 };
 
 export default ListingForm;

@@ -137,11 +137,15 @@ class Admin extends Component {
         <section className="section">
           <h1 className="title is-2">Rubicon Admin</h1>
           { !this.state.showForm &&
-            <button className="button is-info is-fullwidth margin--bottom" onClick={this.showForm}>Add New Job</button>
+            <div>
+              <button className="button is-info is-hidden-mobile margin--bottom" onClick={this.showForm}>Add New Job</button>
+              <button className="button is-info is-hidden-tablet is-fullwidth margin--bottom" onClick={this.showForm}>Add New Job</button>
+            </div>
           }
           { this.state.showForm &&
             <div>
-              <button className="button is-black is-fullwidth margin--bottom" onClick={this.hideForm}>Cancel</button>
+              <button className="button is-black is-hidden-mobile margin--bottom" onClick={this.hideForm}>Cancel</button>
+              <button className="button is-black is-hidden-tablet is-fullwidth margin--bottom" onClick={this.hideForm}>Cancel</button>
               <ListingForm
                 handleChange={this.handleChange}
                 handleValueAdd={this.handleValueAdd}

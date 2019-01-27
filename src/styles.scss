@@ -1,3 +1,7 @@
+@import './styles/variables.scss';
+@import '~bulma';
+@import './styles/helpers.scss';
+
 body {
   background-color: #f8f8f8;
 }
