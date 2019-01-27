@@ -16,7 +16,7 @@
 }
 
 .has-rounded-corners {
-  border-radius: 6px !important;
+  border-radius: 4px !important;
 }
 
 .margin {
@@ -56,6 +56,32 @@
 }
 .margin-triple--top {
   margin-top: 3rem !important;
+}
+
+.margin--right {
+  margin-right: 1rem !important;
+}
+.margin-half--right {
+  margin-right: .5rem !important;
+}
+.margin-double--right {
+  margin-right: 2rem !important;
+}
+.margin-triple--right {
+  margin-right: 3rem !important;
+}
+
+.margin--left {
+  margin-left: 1rem !important;
+}
+.margin-half--left {
+  margin-left: .5rem !important;
+}
+.margin-double--left {
+  margin-left: 2rem !important;
+}
+.margin-triple--left {
+  margin-left: 3rem !important;
 }
 
 .padding {
