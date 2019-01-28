@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+section {
+  &.hero.is-medium {
+    background: $green;
+    background: linear-gradient(90deg, $green, lighten($green, 10%));
+    .hero-body {
+      padding-bottom: 4rem;
+      padding-top: 4rem;
+      .center-everything.flex-column {
+        align-items: flex-start;
+        .title {
+          font-size: 5rem;
+        }
+      }
+      .bg-lines {
+        min-height: 400px;
+        background-image: url('../assets/lines.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/nav.scss';
 
 class Nav extends Component {
   state = {

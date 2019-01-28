@@ -7,14 +7,15 @@
 // $blue: #5589eb;
 // $blue-darker: darken($blue, 8%);
 // $text-dark: #4a4a4a;
-$green: #9aebd2;
+$green: #7bdfc0;
 
 // Bulma variables
 // $primary: $blue;
 $radius-rounded: 4px;
 
 // Navbar
-$navbar-background-color: $green;
+$navbar-height: 4rem;
+$navbar-item-hover-color: $green;
 
 // Card
 $card-shadow: 0 8px 8px 4px rgba(#000, 0.1);
